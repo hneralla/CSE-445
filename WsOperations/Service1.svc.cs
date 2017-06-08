@@ -5,6 +5,7 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
+using System.Xml;
 
 namespace WsOperations
 {
@@ -14,9 +15,30 @@ namespace WsOperations
     {
        public string[] getWsOperations(string url)
         {
-            string[] arr = new string[0];
+           
+            XmlDocument xd = new XmlDocument();
 
-            return arr;
+            try
+            {
+                xd.Load(url);
+            }
+            catch (XmlException xe) 
+            {
+                return new[] { xe.ToString() }; // converts string to string[]
+            }
+
+            XmlNodeList portNodes = xd.SelectSingleNode("wsdl:definitions").SelectNodes("wsdl:portType");
+
+            string[] WsOpDetails = new string[portNodes.Count]; // initializes array with the number of operations (ports) 
+
+            foreach (XmlNode node in portNodes)
+            {
+                string opName = node.SelectSingleNode("wsdl:operation").Attributes.GetNamedItem("name").Value; // obtains the operation name  
+                //string paramTypes =  
+            }
+            
+
+            return WsOpDetails;
         }
     }
 }
