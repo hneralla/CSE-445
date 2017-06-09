@@ -26,9 +26,14 @@ namespace WsOperations
                 return new[] { xe.ToString() }; // converts string to string[]
             }
 
+            XmlNamespaceManager nsmgr = new XmlNamespaceManager(xd.NameTable);
+            nsmgr.AddNamespace("wsdl", "http://schemas.xmlsoap.org/wsdl/"); // is this the solution?? 
+
             XmlNode defNode = xd.SelectSingleNode("definitions");
-            XmlNodeList opNodes = defNode.SelectSingleNode("portType").SelectNodes("operation");
-            XmlNodeList dataTypes = defNode.SelectSingleNode("types").SelectSingleNode("schema").SelectNodes("element");
+
+
+            XmlNodeList opNodes = defNode.SelectSingleNode("wsdl:portType", nsmgr).SelectNodes("operation");
+            XmlNodeList dataTypes = defNode.SelectSingleNode("types", nsmgr).SelectSingleNode("schema", nsmgr).SelectNodes("element");
 
             WsOpDetails = new string[opNodes.Count]; // initializes array with the number of operations (ports) 
 
