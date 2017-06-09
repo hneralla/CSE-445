@@ -3,20 +3,36 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="jumbotron">
-        <h1>ASP.NET</h1>
-        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
-        <p><a href="http://www.asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+        <h1>TryIt </h1>
     </div>
 
     <div class="row">
         <div class="col-md-4">
-            <h2>Getting started</h2>
+            <h2>Get WSDL Operations</h2>
             <p>
-                ASP.NET Web Forms lets you build dynamic websites using a familiar drag-and-drop, event-driven model.
-            A design surface and hundreds of controls and components let you rapidly build sophisticated, powerful UI-driven sites with data access.
+                This service returns the operation names and their input parameter and return types.
             </p>
             <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301948">Learn more &raquo;</a>
+                Enter a WSDL URL:</p>
+            <p>
+                <asp:TextBox ID="textBox1" runat="server"></asp:TextBox>
+            </p>
+            <p>
+                <asp:Button ID="btn_getOps" runat="server" OnClick="btn_getOps_Click" Text="Get Operations &gt;&gt;" />
+            </p>
+            <p>
+                <asp:Label ID="lbl_opNameDefault" runat="server" Text="Operation name"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Label ID="lbl_retTypeDefault" runat="server" Text="Return type"></asp:Label>
+&nbsp;&nbsp;&nbsp;
+                <asp:Label ID="lbl_paramDefault" runat="server" Text="Label"></asp:Label>
+            </p>
+            <p>
+                <asp:Label ID="lbl_opName" runat="server"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Label ID="lbl_retType" runat="server"></asp:Label>
+&nbsp;&nbsp;&nbsp;
+                <asp:Label ID="lbl_paramType" runat="server"></asp:Label>
             </p>
         </div>
         <div class="col-md-4">
@@ -29,13 +45,6 @@
             </p>
         </div>
         <div class="col-md-4">
-            <h2>Web Hosting</h2>
-            <p>
-                You can easily find a web hosting company that offers the right mix of features and price for your applications.
-            </p>
-            <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301950">Learn more &raquo;</a>
-            </p>
         </div>
     </div>
 
