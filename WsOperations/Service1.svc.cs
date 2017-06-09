@@ -13,7 +13,6 @@ namespace WsOperations
 
         public string[] getWsOperations(string url)
         {
-            
             XmlDocument xd = new XmlDocument(); 
             string[] WsOpDetails;
             int opIndex = 0; // to iterate through WsOpDetails
@@ -27,9 +26,9 @@ namespace WsOperations
                 return new[] { xe.ToString() }; // converts string to string[]
             }
 
-            XmlNode defNode = xd.SelectSingleNode("wsdl:definitions");
-            XmlNodeList opNodes = defNode.SelectSingleNode("wsdl:portType").SelectNodes("wsdl:operation");
-            XmlNodeList dataTypes = defNode.SelectSingleNode("wsdl:types").SelectSingleNode("xs:schema").SelectNodes("xs:element");
+            XmlNode defNode = xd.SelectSingleNode("definitions");
+            XmlNodeList opNodes = defNode.SelectSingleNode("portType").SelectNodes("operation");
+            XmlNodeList dataTypes = defNode.SelectSingleNode("types").SelectSingleNode("schema").SelectNodes("element");
 
             WsOpDetails = new string[opNodes.Count]; // initializes array with the number of operations (ports) 
 
@@ -45,8 +44,8 @@ namespace WsOperations
                 {
                     if (elementNode.Attributes.GetNamedItem("name").Value == opName)
                     {
-                        XmlNodeList list = elementNode.SelectSingleNode("xs:complexType")
-                                            .SelectSingleNode("xs:sequence").SelectNodes("xs:element"); // list of element nodes (parameters)
+                        XmlNodeList list = elementNode.SelectSingleNode("xs:complexType") // list of element nodes (parameters)
+                                            .SelectSingleNode("xs:sequence").SelectNodes("xs:element"); 
                         
                         foreach (XmlNode elNode in list) // iterates through n number of parameters
                         {
@@ -64,7 +63,7 @@ namespace WsOperations
                     elementNode = elementNode.NextSibling; // goes to the next elementNode
                 }
 
-                WsOpDetails[opIndex] = returnType + "||" + opName + "||" + paramTypes; // inserts data into the array
+                WsOpDetails[opIndex] = returnType + "|" + opName + "|" + paramTypes; // inserts data into the array 
                 opIndex++; 
             }
 
