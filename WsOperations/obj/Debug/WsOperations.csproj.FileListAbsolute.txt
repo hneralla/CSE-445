@@ -1,0 +1,6 @@
+C:\Users\Harith Neralla\repos\cse-445-assignment-3\WsOperations\bin\WsOperations.dll.config
+C:\Users\Harith Neralla\repos\cse-445-assignment-3\WsOperations\bin\WsOperations.dll
+C:\Users\Harith Neralla\repos\cse-445-assignment-3\WsOperations\bin\WsOperations.pdb
+C:\Users\Harith Neralla\repos\cse-445-assignment-3\WsOperations\obj\Debug\WsOperations.csprojResolveAssemblyReference.cache
+C:\Users\Harith Neralla\repos\cse-445-assignment-3\WsOperations\obj\Debug\WsOperations.dll
+C:\Users\Harith Neralla\repos\cse-445-assignment-3\WsOperations\obj\Debug\WsOperations.pdb
