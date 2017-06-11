@@ -7,15 +7,12 @@ using System.ServiceModel.Web;
 using System.Text;
 
 namespace WeatherConditions
-{
-    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IService1" in both code and config file together.
+{ 
     [ServiceContract]
     public interface IService1
     {
-
+        // This operation returns a string of data about the user-given ZIP code
         [OperationContract]
         string[] getLocationDetails(string zipcode);
-
     }
-
 }
