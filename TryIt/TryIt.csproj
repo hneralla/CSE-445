@@ -129,6 +129,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <None Include="Connected Services\NearestStore\Service1.wsdl" />
+    <None Include="Connected Services\NearestStore\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\NearestStore\Service11.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\WeatherService\Service1.wsdl" />
     <None Include="Connected Services\WeatherService\Service1.xsd">
       <SubType>Designer</SubType>
@@ -139,15 +146,15 @@
     <None Include="Connected Services\WeatherService\Service12.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\WsOps\configuration91.svcinfo" />
-    <None Include="Connected Services\WsOps\configuration.svcinfo" />
-    <None Include="Connected Services\WsOps\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
     <None Include="Connected Services\WeatherService\configuration91.svcinfo" />
     <None Include="Connected Services\WeatherService\configuration.svcinfo" />
     <None Include="Connected Services\WeatherService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\NearestStore\configuration91.svcinfo" />
+    <None Include="Connected Services\NearestStore\configuration.svcinfo" />
+    <None Include="Connected Services\NearestStore\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -165,7 +172,6 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="Connected Services\WsOps\Service1.wsdl" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -211,12 +217,12 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Connected Services\WeatherService\Reference.cs">
+    <Compile Include="Connected Services\NearestStore\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="Connected Services\WsOps\Reference.cs">
+    <Compile Include="Connected Services\WeatherService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -278,8 +284,8 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\NearestStore\" />
     <WCFMetadataStorage Include="Connected Services\WeatherService\" />
-    <WCFMetadataStorage Include="Connected Services\WsOps\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

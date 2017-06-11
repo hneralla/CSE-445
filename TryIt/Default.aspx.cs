@@ -12,44 +12,6 @@ namespace TryIt
 
         }
 
-        /*protected void btn_getOps_Click(object sender, EventArgs e)
-        {
-
-            WsOps.Service1Client client = new WsOps.Service1Client();
-            string url = textBox1.Text;
-            url = ReplaceLastOccurrence(url, "?wsdl", "?singlewsdl");
-            string[] input = client.getWsOperations(url);
-
-            clearLabel(lbl_opNameDefault);
-            clearLabel(lbl_paramDefault);
-            clearLabel(lbl_retTypeDefault);
-
-            lbl_opNameDefault.Text = "Operation Name";
-            lbl_paramDefault.Text = "Parameter types";
-            lbl_retTypeDefault.Text = "Return type";
-
-            for (int index = 0; index < input.Length; index++)
-            {
-                var data = input[index].Split(new[] { ':' });
-                lbl_opName.Text += data[0] + "\r\n";
-                var inputParams = data[1].Split(new[] { '/' });
-                var outputParams = data[2].Split(new[] { '/' });
-
-                foreach(string str in inputParams)
-                {
-                    lbl_paramType.Text += str + " ";
-                }
-
-                foreach (string str in outputParams)
-                {
-                    lbl_retType.Text += str + " ";
-                }
-
-                lbl_paramType.Text += "\r\n";
-                lbl_retType.Text += "\r\n";
-            }
-        }*/
-
         private void clearLabel(Label lbl)
         {
             lbl.Text = "";
@@ -58,13 +20,13 @@ namespace TryIt
         protected void btn_submit_Click(object sender, EventArgs e)
         {
             WeatherService.Service1Client client = new WeatherService.Service1Client();
-            string zip = textBox_zipcode.Text;
+            string zip = txtBox_ZIP1.Text;
             clearLabel(lbl_info);
             clearLabel(lbl_first);
             clearLabel(lbl_last);
             HyperLink1.Text = "";
-            string usZipValid = @"^\d{5}(?:[-\s]\d{4})?$";
-            if (!String.IsNullOrWhiteSpace(textBox_zipcode.Text) && Regex.Match(zip, usZipValid).Success)
+            
+            if (!String.IsNullOrWhiteSpace(txtBox_ZIP1.Text) && checkZIP(zip))
             {
                 string[] data = client.getLocationDetails(zip);
                 if (data.Length > 1)
@@ -98,6 +60,50 @@ namespace TryIt
         protected void TextBox2_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        protected void btn_submit2_Click(object sender, EventArgs e)
+        {
+            NearestStore.Service1Client client = new NearestStore.Service1Client();
+            clearLabel(lbl_info2);
+            string zipcode = txtBox_ZIP2.Text;
+            string data = "";
+            if (!String.IsNullOrWhiteSpace(txtBox_ZIP2.Text) && !String.IsNullOrWhiteSpace(txtBox_storeName.Text))
+            {
+                if (checkZIP(zipcode))
+                {
+                    data = client.findNearestStore(zipcode, txtBox_storeName.Text);
+                    var output = data.Split(new[] { '|' });
+                    if (output.Length > 1)
+                    {
+                        IMG2.ImageUrl = output[0];
+                        lbl_info2.Text += "Store Name: " + output[1] + "<br />";
+                        lbl_info2.Text += "Store Rating: " + output[2] + "<br />";
+                        lbl_info2.Text += "Store Address: " + output[3];
+                    }
+                    else
+                        lbl_info2.Text = output[0];
+                   
+                }
+                else
+                {
+                    lbl_info2.Text = "Enter a valid ZIP code.";
+                }
+            }
+            else
+            {
+                lbl_info2.Text = "Please enter data in both boxes.";
+            }
+            
+        }
+
+        private Boolean checkZIP(string zipcode)
+        {
+            string usZipValid = @"^\d{5}(?:[-\s]\d{4})?$";
+            if (Regex.Match(zipcode, usZipValid).Success)
+                return true;
+            else
+                return false;
         }
     }
 }
