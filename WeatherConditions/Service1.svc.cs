@@ -17,7 +17,6 @@ namespace WeatherConditions
         public string[] getLocationDetails(string zipcode)
         {
             List<string> details = new List<string>(); // List of strings to return later
-            var json;
             ZIPRootObject obj = new ZIPRootObject(); // Creates object to deserialize JSON doc into
             WeatherRootObject obj1 = new WeatherRootObject(); // Creates object to deserialize JSON doc into
             string wind;
@@ -26,7 +25,7 @@ namespace WeatherConditions
 
             using (var webClient = new System.Net.WebClient()) 
             {
-                json = webClient.DownloadString(url); // Retrieves JSON Document
+                var json = webClient.DownloadString(url); // Retrieves JSON Document
                 
                 obj = JsonConvert.DeserializeObject<ZIPRootObject>(json); // Deserializes the JSON document
                  
@@ -36,7 +35,7 @@ namespace WeatherConditions
 
                     // Builds the nearby cities string
                     nearbyCities = "Nearby Cities: "; 
-                    foreach (Station station in obj.location.nearby_weather_stations.airport.station)
+                    foreach (ZIPRootObject.Location.Nearby_Weather_Stations.Airport.Station station in obj.location.nearby_weather_stations.airport.station)
                     {
                         nearbyCities += station.city + ", ";
                     }
