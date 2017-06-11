@@ -2,50 +2,37 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-    <div class="jumbotron">
+    <div>
         <h1>TryIt </h1>
     </div>
 
     <div class="row">
-        <div class="col-md-4">
-            <h2>Get WSDL Operations</h2>
+        <div >
+            <h3>
+                <asp:Image ID="Image1" runat="server" ImageUrl="http://icons-ak.wxug.com/graphics/wu2/logo_130x80.png" />
+                &nbsp;Weather Underground API - Wrapped service</h3>
+            <h4>ZIP code details: Returns details of the ZIP code</h4>
+            <p class="absolute">
+                Method Name: getLocationDetails(...)<br />
+            Input parameter: string
+            <br />
+            Return type: string[ ]</p>
             <p>
-                This service returns the operation names and their input parameter and return types.
+                Enter a valid ZIP code:&nbsp;&nbsp;&nbsp;&nbsp; <asp:TextBox ID="textBox_zipcode" runat="server" OnTextChanged="TextBox2_TextChanged"></asp:TextBox>
+            &nbsp;&nbsp;&nbsp;
+                <asp:Button ID="btn_submit" runat="server" OnClick="btn_submit_Click" Text="Submit" />
             </p>
             <p>
-                Enter a WSDL URL:</p>
-            <p>
-                <asp:TextBox ID="textBox1" runat="server"></asp:TextBox>
+                <asp:Label ID="lbl_info" runat="server"></asp:Label>  
             </p>
             <p>
-                <asp:Button ID="btn_getOps" runat="server" OnClick="btn_getOps_Click" Text="Get Operations &gt;&gt;" />
+                <asp:Label ID="lbl_first" runat="server"></asp:Label>
+                <asp:HyperLink ID="HyperLink1" runat="server"></asp:HyperLink>
+                <asp:Label ID="lbl_last" runat="server"></asp:Label>
             </p>
             <p>
-                <asp:Label ID="lbl_opNameDefault" runat="server" Text="Operation name"></asp:Label>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Label ID="lbl_retTypeDefault" runat="server" Text="Return type"></asp:Label>
-&nbsp;&nbsp;&nbsp;
-                <asp:Label ID="lbl_paramDefault" runat="server" Text="Label"></asp:Label>
-            </p>
-            <p>
-                <asp:Label ID="lbl_opName" runat="server"></asp:Label>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Label ID="lbl_retType" runat="server"></asp:Label>
-&nbsp;&nbsp;&nbsp;
-                <asp:Label ID="lbl_paramType" runat="server"></asp:Label>
-            </p>
-        </div>
-        <div class="col-md-4">
-            <h2>Get more libraries</h2>
-            <p>
-                NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.
-            </p>
-            <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301949">Learn more &raquo;</a>
-            </p>
-        </div>
-        <div class="col-md-4">
-        </div>
+                &nbsp;</p>
     </div>
 
+    </div>
 </asp:Content>

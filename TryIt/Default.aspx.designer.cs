@@ -13,75 +13,66 @@ namespace TryIt {
     public partial class _Default {
         
         /// <summary>
-        /// textBox1 control.
+        /// Image1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox textBox1;
+        protected global::System.Web.UI.WebControls.Image Image1;
         
         /// <summary>
-        /// btn_getOps control.
+        /// textBox_zipcode control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_getOps;
+        protected global::System.Web.UI.WebControls.TextBox textBox_zipcode;
         
         /// <summary>
-        /// lbl_opNameDefault control.
+        /// btn_submit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_opNameDefault;
+        protected global::System.Web.UI.WebControls.Button btn_submit;
         
         /// <summary>
-        /// lbl_retTypeDefault control.
+        /// lbl_info control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_retTypeDefault;
+        protected global::System.Web.UI.WebControls.Label lbl_info;
         
         /// <summary>
-        /// lbl_paramDefault control.
+        /// lbl_first control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_paramDefault;
+        protected global::System.Web.UI.WebControls.Label lbl_first;
         
         /// <summary>
-        /// lbl_opName control.
+        /// HyperLink1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_opName;
+        protected global::System.Web.UI.WebControls.HyperLink HyperLink1;
         
         /// <summary>
-        /// lbl_retType control.
+        /// lbl_last control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_retType;
-        
-        /// <summary>
-        /// lbl_paramType control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_paramType;
+        protected global::System.Web.UI.WebControls.Label lbl_last;
     }
 }
