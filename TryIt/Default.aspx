@@ -1,9 +1,9 @@
-﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="TryIt._Default" %>
+﻿<%@ Page Title="Try It" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="TryIt._Default" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <div>
-        <h1>TryIt </h1>
+        <h1>TryIt Page </h1>
     </div>
 
     <div class="row">
@@ -34,14 +34,14 @@
                 &nbsp;</p>
             <h3>
                 Find the Nearest Store Service</h3>
-            <p>
+            <h4>
                 Returns store address and details using the given ZIP code and store name.
-                Uses existing Google Maps API.</p>
+                Uses existing Google Maps API.</h4>
             <p class="absolute">
                 Method Name: findNearestStore(...)<br />
             Input parameters: string
                 (zipcode), string (storeName)<br />
-            Return type: string[ ]</p>
+                Return type: string</p>
             <p class="absolute">
                 Enter a valid ZIP code:&nbsp;&nbsp;&nbsp;
                 <asp:TextBox ID="txtBox_ZIP2" runat="server"></asp:TextBox>

@@ -7,11 +7,6 @@ namespace TryIt
 {
     public partial class _Default : Page
     {
-        protected void Page_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void clearLabel(Label lbl)
         {
             lbl.Text = "";
@@ -57,15 +52,11 @@ namespace TryIt
             }
         }
 
-        protected void TextBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         protected void btn_submit2_Click(object sender, EventArgs e)
         {
             NearestStore.Service1Client client = new NearestStore.Service1Client();
             clearLabel(lbl_info2);
+            IMG2.ImageUrl = "";
             string zipcode = txtBox_ZIP2.Text;
             string data = "";
             if (!String.IsNullOrWhiteSpace(txtBox_ZIP2.Text) && !String.IsNullOrWhiteSpace(txtBox_storeName.Text))
@@ -104,6 +95,16 @@ namespace TryIt
                 return true;
             else
                 return false;
+        }
+
+        protected void Page_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void TextBox2_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
