@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Try It" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="TryIt._Default" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="TryIt._Default" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
@@ -11,14 +11,14 @@
             <h3>
                 <asp:Image ID="IMG1" runat="server" ImageUrl="http://icons-ak.wxug.com/graphics/wu2/logo_130x80.png" />
                 &nbsp;Weather Underground API - Wrapped service</h3>
-            <h4>ZIP code details: Returns details of the ZIP code</h4>
+            <h4>ZIP code details: Returns weather details of the ZIP code</h4>
             <p class="absolute">
                 Method Name: getLocationDetails(...)<br />
             Input parameter: string
                 (zipcode)<br />
             Return type: string[ ]</p>
             <p>
-                Enter a valid ZIP code:&nbsp;&nbsp;&nbsp;&nbsp; <asp:TextBox ID="txtBox_ZIP1" runat="server" OnTextChanged="TextBox2_TextChanged"></asp:TextBox>
+                Enter a valid ZIP code:&nbsp;&nbsp;&nbsp;&nbsp; <asp:TextBox ID="txtBox_ZIP1" runat="server"></asp:TextBox>
             &nbsp;&nbsp;&nbsp;
                 <asp:Button ID="btn_submit1" runat="server" OnClick="btn_submit_Click" Text="Submit" />
             </p>

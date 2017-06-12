@@ -12,7 +12,7 @@ namespace WeatherConditions
         // Service obtains the weather conditions and location details using a ZIP code as parameter.
         // External services used are from the Weather Underground API. 
         // External services invoked: Geo-lookup (returns location details) and Current Conditions (returns weather details).
-        // This web services parses JSON responses from the API services using the JSON.NET library
+        // This web service parses JSON responses from the API services using the JSON.NET library
 
         public string[] getLocationDetails(string zipcode)
         {
