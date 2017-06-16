@@ -6,12 +6,17 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TryIt", "TryIt\TryIt.csproj", "{51A82B28-3E46-4F90-ABD4-E5AAC446A65C}"
 	ProjectSection(ProjectDependencies) = postProject
 		{57BB0CA2-3139-4F2D-934A-484AC3EA0AFD} = {57BB0CA2-3139-4F2D-934A-484AC3EA0AFD}
+		{BEB4A6BD-0501-43D7-BE5E-8E2777B7096D} = {BEB4A6BD-0501-43D7-BE5E-8E2777B7096D}
 		{58726AFA-B87A-497E-9957-260E8B25B07D} = {58726AFA-B87A-497E-9957-260E8B25B07D}
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherConditions", "WeatherConditions\WeatherConditions.csproj", "{58726AFA-B87A-497E-9957-260E8B25B07D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NearestStore", "NearestStores\NearestStore.csproj", "{57BB0CA2-3139-4F2D-934A-484AC3EA0AFD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Find Distance", "Find Distance\Find Distance.csproj", "{9E90AF93-3975-4186-A26B-4B0762481784}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateAccount", "CreateAccount\CreateAccount.csproj", "{BEB4A6BD-0501-43D7-BE5E-8E2777B7096D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +36,14 @@ Global
 		{57BB0CA2-3139-4F2D-934A-484AC3EA0AFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{57BB0CA2-3139-4F2D-934A-484AC3EA0AFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{57BB0CA2-3139-4F2D-934A-484AC3EA0AFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E90AF93-3975-4186-A26B-4B0762481784}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E90AF93-3975-4186-A26B-4B0762481784}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E90AF93-3975-4186-A26B-4B0762481784}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E90AF93-3975-4186-A26B-4B0762481784}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEB4A6BD-0501-43D7-BE5E-8E2777B7096D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEB4A6BD-0501-43D7-BE5E-8E2777B7096D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEB4A6BD-0501-43D7-BE5E-8E2777B7096D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEB4A6BD-0501-43D7-BE5E-8E2777B7096D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

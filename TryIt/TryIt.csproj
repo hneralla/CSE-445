@@ -128,12 +128,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="About.aspx" />
-    <None Include="Connected Services\NearestStore\Service1.wsdl" />
-    <None Include="Connected Services\NearestStore\Service1.xsd">
+    <None Include="Connected Services\CreateAccountService\CreateAccountService.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\NearestStore\Service11.xsd">
+    <None Include="Connected Services\CreateAccountService\CreateAccountService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CreateAccountService\Service1.wsdl" />
+    <None Include="Connected Services\NearestStoreService\Service1.wsdl" />
+    <None Include="Connected Services\NearestStoreService\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\NearestStoreService\Service11.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\WeatherService\Service1.wsdl" />
@@ -152,16 +158,22 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <None Include="Connected Services\NearestStore\configuration91.svcinfo" />
-    <None Include="Connected Services\NearestStore\configuration.svcinfo" />
-    <None Include="Connected Services\NearestStore\Reference.svcmap">
+    <None Include="Connected Services\NearestStoreService\configuration91.svcinfo" />
+    <None Include="Connected Services\NearestStoreService\configuration.svcinfo" />
+    <None Include="Connected Services\NearestStoreService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <Content Include="Contact.aspx" />
+    <None Include="Connected Services\CreateAccountService\configuration91.svcinfo" />
+    <None Include="Connected Services\CreateAccountService\configuration.svcinfo" />
+    <None Include="Connected Services\CreateAccountService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="CreateAccount.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -173,6 +185,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="NearestStore.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -203,21 +216,20 @@
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
     <Content Include="ViewSwitcher.ascx" />
+    <Content Include="WeatherConditions.aspx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="About.aspx.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="About.aspx.designer.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-    </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Connected Services\NearestStore\Reference.cs">
+    <Compile Include="Connected Services\CreateAccountService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\NearestStoreService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -227,12 +239,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="Contact.aspx.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
+    <Compile Include="CreateAccount.aspx.cs">
+      <DependentUpon>CreateAccount.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Contact.aspx.designer.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
+    <Compile Include="CreateAccount.aspx.designer.cs">
+      <DependentUpon>CreateAccount.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -243,6 +255,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="NearestStore.aspx.cs">
+      <DependentUpon>NearestStore.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NearestStore.aspx.designer.cs">
+      <DependentUpon>NearestStore.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
@@ -266,6 +285,13 @@
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
+    <Compile Include="WeatherConditions.aspx.cs">
+      <DependentUpon>WeatherConditions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WeatherConditions.aspx.designer.cs">
+      <DependentUpon>WeatherConditions.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -284,7 +310,8 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\NearestStore\" />
+    <WCFMetadataStorage Include="Connected Services\CreateAccountService\" />
+    <WCFMetadataStorage Include="Connected Services\NearestStoreService\" />
     <WCFMetadataStorage Include="Connected Services\WeatherService\" />
   </ItemGroup>
   <PropertyGroup>
