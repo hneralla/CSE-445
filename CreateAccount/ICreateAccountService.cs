@@ -8,14 +8,10 @@ using System.Text;
 
 namespace CreateAccount
 {
-    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IService1" in both code and config file together.
     [ServiceContract]
     public interface ICreateAccountService
     {
-
         [OperationContract]
-        Boolean createAccount(string username, string password);
-        
+        Boolean createAccount(string username, string password);    
     }
-
 }
