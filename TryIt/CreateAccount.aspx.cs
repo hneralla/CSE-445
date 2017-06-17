@@ -17,6 +17,7 @@ namespace TryIt
         protected void btn_create_Click(object sender, EventArgs e)
         {
             CreateAccountService.CreateAccountServiceClient client = new CreateAccountService.CreateAccountServiceClient();
+
             if (!String.IsNullOrWhiteSpace(txtBox_username.Text) && !String.IsNullOrWhiteSpace(txtBox_password.Text))
             {
                 Boolean created = client.createAccount(txtBox_username.Text, txtBox_password.Text);

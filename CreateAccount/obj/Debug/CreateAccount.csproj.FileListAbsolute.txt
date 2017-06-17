@@ -6,3 +6,4 @@ C:\Users\Harith Neralla\repos\cse-445-assignment-3\CreateAccount\bin\Newtonsoft.
 C:\Users\Harith Neralla\repos\cse-445-assignment-3\CreateAccount\bin\Newtonsoft.Json.xml
 C:\Users\Harith Neralla\repos\cse-445-assignment-3\CreateAccount\obj\Debug\CreateAccount.dll
 C:\Users\Harith Neralla\repos\cse-445-assignment-3\CreateAccount\obj\Debug\CreateAccount.pdb
+C:\Users\Harith Neralla\repos\cse-445-assignment-3\CreateAccount\bin\user_credentials.json

@@ -135,6 +135,16 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\CreateAccountService\Service1.wsdl" />
+    <None Include="Connected Services\FindDistanceService\Service1.wsdl" />
+    <None Include="Connected Services\FindDistanceService\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\FindDistanceService\Service11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\FindDistanceService\Service12.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\NearestStoreService\Service1.wsdl" />
     <None Include="Connected Services\NearestStoreService\Service1.xsd">
       <SubType>Designer</SubType>
@@ -170,12 +180,19 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <None Include="Connected Services\FindDistanceService\configuration91.svcinfo" />
+    <None Include="Connected Services\FindDistanceService\configuration.svcinfo" />
+    <None Include="Connected Services\FindDistanceService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="CreateAccount.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
+    <Content Include="FindDistance.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -184,6 +201,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="NearestStore.aspx" />
     <Content Include="Scripts\bootstrap.js" />
@@ -229,6 +247,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\FindDistanceService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\NearestStoreService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -252,6 +275,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FindDistance.aspx.cs">
+      <DependentUpon>FindDistance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FindDistance.aspx.designer.cs">
+      <DependentUpon>FindDistance.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -311,6 +341,7 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\CreateAccountService\" />
+    <WCFMetadataStorage Include="Connected Services\FindDistanceService\" />
     <WCFMetadataStorage Include="Connected Services\NearestStoreService\" />
     <WCFMetadataStorage Include="Connected Services\WeatherService\" />
   </ItemGroup>

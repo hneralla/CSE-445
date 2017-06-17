@@ -4,6 +4,7 @@ using System.Linq;
 using System.IO;
 using Newtonsoft.Json;
 using System.Text;
+using System.Web;
 
 namespace CreateAccount
 {
@@ -42,8 +43,8 @@ namespace CreateAccount
             Boolean created = false; // boolean value to return
             byte[] pwd; // byte array to store the encrypted password into
             string encryptedPass = ""; // string to store the encrypted password into
-
-            string path = @"\\webstrar.fulton.asu.edu\website53\page3\user_credentials.json"; // File path to user credentials 
+            
+            string path = Path.Combine(HttpRuntime.AppDomainAppPath, @"\page3\user_credentials.json"); // File path to user credentials 
             string jsonData = File.ReadAllText(path); // reads in the JSON file into a string
 
             usersObj = JsonConvert.DeserializeObject<UsersRootObject>(jsonData); // transfers jsonData to the usersObj

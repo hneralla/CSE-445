@@ -47,6 +47,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" runat="server" href="~/">TryIt Application</a>
                 </div>
@@ -55,7 +56,8 @@
                         <li><a runat="server" href="~/">Home</a></li>
                         <li><a runat="server" href="~/WeatherConditions">Weather Conditions</a></li>
                         <li><a runat="server" href="~/NearestStore">Nearest Store</a></li>
-                        <li><a runat="server" href="~/createAccount">Create Account</a></li>
+                        <li><a runat="server" href="~/CreateAccount">Create Account</a></li>
+                        <li><a runat="server" href="~/FindDistance">Find Distance</a></li>
                     </ul>
                 </div>
             </div>

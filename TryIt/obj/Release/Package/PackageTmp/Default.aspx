@@ -16,6 +16,9 @@
             <p>
                 <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="http://webstrar53.fulton.asu.edu/page0/NearestStore">Nearest Store Service</asp:HyperLink>
             </p>
+            <p>
+                <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="http://webstrar53.fulton.asu.edu/page0/CreateAccount.aspx">Create Account Service</asp:HyperLink>
+            </p>
     </div>
 
     </div>
