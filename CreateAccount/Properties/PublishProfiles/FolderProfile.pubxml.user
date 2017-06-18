@@ -11,16 +11,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/CreateAccount.dll">
-      <publishTime>06/17/2017 10:01:56</publishTime>
+      <publishTime>06/17/2017 19:10:37</publishTime>
     </File>
     <File Include="bin/CreateAccount.pdb">
-      <publishTime>06/17/2017 10:01:56</publishTime>
+      <publishTime>06/17/2017 19:10:37</publishTime>
     </File>
     <File Include="bin/Newtonsoft.Json.dll">
       <publishTime>04/02/2017 17:46:32</publishTime>
     </File>
     <File Include="bin/user_credentials.json">
-      <publishTime>06/16/2017 18:25:57</publishTime>
+      <publishTime>06/17/2017 19:00:22</publishTime>
     </File>
     <File Include="CreateAccountService.svc">
       <publishTime>06/16/2017 18:21:27</publishTime>
@@ -29,7 +29,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/16/2017 12:03:21</publishTime>
     </File>
     <File Include="user_credentials.json">
-      <publishTime>06/16/2017 18:25:57</publishTime>
+      <publishTime>06/17/2017 19:00:22</publishTime>
     </File>
     <File Include="Web.config">
       <publishTime>06/16/2017 18:37:06</publishTime>

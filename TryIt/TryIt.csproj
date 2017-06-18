@@ -135,16 +135,6 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\CreateAccountService\Service1.wsdl" />
-    <None Include="Connected Services\FindDistanceService\Service1.wsdl" />
-    <None Include="Connected Services\FindDistanceService\Service1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\FindDistanceService\Service11.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\FindDistanceService\Service12.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Connected Services\NearestStoreService\Service1.wsdl" />
     <None Include="Connected Services\NearestStoreService\Service1.xsd">
       <SubType>Designer</SubType>
@@ -177,12 +167,6 @@
     <None Include="Connected Services\CreateAccountService\configuration91.svcinfo" />
     <None Include="Connected Services\CreateAccountService\configuration.svcinfo" />
     <None Include="Connected Services\CreateAccountService\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <None Include="Connected Services\FindDistanceService\configuration91.svcinfo" />
-    <None Include="Connected Services\FindDistanceService\configuration.svcinfo" />
-    <None Include="Connected Services\FindDistanceService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -243,11 +227,6 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Connected Services\CreateAccountService\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
-    <Compile Include="Connected Services\FindDistanceService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -341,7 +320,6 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\CreateAccountService\" />
-    <WCFMetadataStorage Include="Connected Services\FindDistanceService\" />
     <WCFMetadataStorage Include="Connected Services\NearestStoreService\" />
     <WCFMetadataStorage Include="Connected Services\WeatherService\" />
   </ItemGroup>

@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Net;
 using Newtonsoft.Json;
-using System.Linq;
-using System.Runtime.Serialization;
-using System.ServiceModel;
-using System.ServiceModel.Web;
-using System.Text;
 
 namespace FindDistance
 {
@@ -16,7 +10,7 @@ namespace FindDistance
         // ASU CSE 445 Summer 2017
         // 06/17/2017
 
-        // Service obtains the distance and duration between two points. Valid parameters are ZIP codes and addresses
+        // This RESTful service obtains the distance and duration between two points. Valid parameters are ZIP codes and addresses
         // External services used are from the Google Maps API.
         // External services invoked: Geocode (returns the place id of the location) and Distance Matrix (returns distance and travel duration).
         // This web service parses JSON responses from the API services using the JSON.NET library
@@ -26,11 +20,11 @@ namespace FindDistance
             List<string> dataList = new List<string>();
             PlaceIdObject originID = new PlaceIdObject(); // Place ID object to read in the JSON response for the origin place id request
             PlaceIdObject destID = new PlaceIdObject(); // Place ID object to read in the JSON response for the dest place id request
-            DistanceObject distObj = new DistanceObject();
+            DistanceObject distObj = new DistanceObject(); // Distance Object to read in the JSON response for distance and duration
             string distance = "";
             string duration = "";
             string placeIDURL = "https://maps.googleapis.com/maps/api/geocode/json?address=";
-            string distURL = "https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=";
+            string distURL = "https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=place_id:";
             string originIdUrl = ""; // + 1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=YOUR_API_KEY"; // Obtains the google place id for the origin
             string originPlaceID = "";
             string originStreetAddress = "";
@@ -63,7 +57,7 @@ namespace FindDistance
 
             // Parses the destination parameter and extracts the zipcode/address elements
             var destArr = dest.Split(':'); // Splits the origin using ':'
-            if (destArr[0] == "ZIP") 
+            if (destArr[0] == "ZIP")
             {
                 dest = destArr[1]; // sets the destination to the zip code
             }
@@ -78,7 +72,7 @@ namespace FindDistance
                 }
 
                 destStreetAddress = destStreetAddress.TrimEnd('+'); // Removes the extra '+' from the end of the string
-                
+
                 dest = destStreetAddress + ",+" + destCity; // builds the destination element for the url
             }
 
@@ -100,17 +94,16 @@ namespace FindDistance
                 destID = JsonConvert.DeserializeObject<PlaceIdObject>(json); // loads the JSON string into the PlaceIdObject
 
                 if (destID.status == "OK") // makes sures that the request went through
-                { 
+                {
                     destPlaceID = destID.results[0].place_id; // sets to variable to the placeId
                 }
             }
 
-            distURL += originPlaceID + "&destinations=" + destPlaceID + distAPIKEY; // builds the URL to get the distance and duration from
+            distURL += originPlaceID + "&destinations=place_id:" + destPlaceID + distAPIKEY; // builds the URL to get the distance and duration from
             using (var webClient = new WebClient())
             {
                 var json = webClient.DownloadString(distURL); // loads the JSON string from the url
                 distObj = JsonConvert.DeserializeObject<DistanceObject>(json); // loads the JSON string into the DistanceObject
-
 
                 if (distObj.status == "OK") // Makes sure that the request was valid
                 {
@@ -120,8 +113,8 @@ namespace FindDistance
                         duration = distObj.rows[0].elements[0].duration.text;
 
                         dataList.Add("OK"); // lets the client know that there are no errors
-                        dataList.Add("Distance: " + distance); 
-                        dataList.Add("Duration: " + duration);
+                        dataList.Add("Distance: " + distance);
+                        dataList.Add("Travel Duration: " + duration);
                     }
                     else
                     {
@@ -136,49 +129,47 @@ namespace FindDistance
 
             return dataList.ToArray();
         }
-    }
 
-    // The code below provides class definitions for the JSON documents to be loaded into
+        // The code below provides class definitions for the JSON documents to be loaded into
 
-    // Class definitions for the first service invocation (for the place id)
-    public class PlaceIdObject
-    {
-        public Result[] results { get; set; }
-        public string status { get; set; }
-        public class Result
+        // Class definitions for the first service invocation (for the place id)
+        public class PlaceIdObject
         {
-            public string place_id { get; set; }
-        }
-    }
-
-
-    // Class definitions for the second service invocation (for the distance and duration)
-    public class DistanceObject
-    {
-        public string[] destination_addresses { get; set; }
-        public string[] origin_addresses { get; set; }
-        public Row[] rows { get; set; }
-        public string status { get; set; }
-
-        public class Row
-        {
-            public Element[] elements { get; set; }
-
-            public class Element
+            public Result[] results { get; set; }
+            public string status { get; set; }
+            public class Result
             {
-                public Distance distance { get; set; }
-                public Duration duration { get; set; }
-                public string status { get; set; }
-                public class Distance
-                {
-                    public string text { get; set; }
-                }
+                public string place_id { get; set; }
+            }
+        }
 
-                public class Duration
+        // Class definitions for the second service invocation (for the distance and duration)
+        public class DistanceObject
+        {
+            public Row[] rows { get; set; }
+            public string status { get; set; }
+
+            public class Row
+            {
+                public Element[] elements { get; set; }
+
+                public class Element
                 {
-                    public string text { get; set; }
+                    public Distance distance { get; set; }
+                    public Duration duration { get; set; }
+                    public string status { get; set; }
+                    public class Distance
+                    {
+                        public string text { get; set; }
+                    }
+
+                    public class Duration
+                    {
+                        public string text { get; set; }
+                    }
                 }
             }
         }
     }
+
 }

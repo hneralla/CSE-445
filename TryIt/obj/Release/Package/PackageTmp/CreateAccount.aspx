@@ -4,7 +4,7 @@
     <h3>Create Account Service</h3>
     <h4>Creates an account with the username and password. Returns an account creation confirmation.</h4>
     <p class="absolute">
-        Method Name: createAccount(...)<br />
+        Method name: createAccount(...)<br />
         Input parameters: string (username), string (password)<br />
         Return type: Boolean</p>
     <p class="absolute">

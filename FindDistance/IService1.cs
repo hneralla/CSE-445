@@ -13,6 +13,6 @@ namespace FindDistance
     {
         [OperationContract]
         [WebInvoke(Method = "GET", ResponseFormat = WebMessageFormat.Json)]
-        string[] findDistance(string origin, string dest);
+        string[] findDistance(string origin, string dest);  
     }
 }

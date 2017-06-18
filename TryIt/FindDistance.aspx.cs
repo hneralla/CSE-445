@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Net;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -40,7 +43,7 @@ namespace TryIt
 
         protected void btn_submit_Click(object sender, EventArgs e)
         {
-            FindDistanceService.Service1Client client = new FindDistanceService.Service1Client();
+            JSONObj obj = new JSONObj();
             Util util = new Util();
             string[] result;
             string origin = "";
@@ -51,7 +54,7 @@ namespace TryIt
             // Checks if the origin address/ZIP are valid
             if (rdio_btn_address.Checked)
             {
-                origin  += "ADD:";
+                origin += "ADD:";
                 if (String.IsNullOrWhiteSpace(txtBox_1.Text) || String.IsNullOrWhiteSpace(txtBox_2.Text))
                 {
                     lbl_info.Text = "Please enter text in both fields.";
@@ -82,7 +85,7 @@ namespace TryIt
                     {
                         origin += txtBox_1.Text;
                     }
-                } 
+                }
             }
 
             // Checks if the destination address/ZIP are valid
@@ -122,16 +125,20 @@ namespace TryIt
                 }
             }
 
-            result = client.findDistance(origin, dest);
-
-            if (result[0] ==  "OK")
+            using (var webClient = new WebClient())
             {
-                lbl_result.Text = result[1] + "<br />" + result[2];
-            }else
-            {
-                lbl_result.Text = result[0];
+                string json = webClient.DownloadString("http://webstrar53.fulton.asu.edu/page4/Service1.svc/findDistance?origin=" + origin+"&dest="+dest); // loads the JSON string from the url
+                JArray arr = JArray.Parse(json);// loads the JSON string into the PlaceIdObject
+                
+                if (arr[0].ToString() == "OK")
+                {
+                    lbl_result.Text = arr[1].ToString() + "<br />" + arr[2].ToString();
+                }
+                else
+                {
+                    lbl_result.Text = arr[0].ToString();
+                }
             }
-
         }
 
         protected void txtBox_2_TextChanged(object sender, EventArgs e)
@@ -162,5 +169,10 @@ namespace TryIt
                 Label2.Text = "";
             }
         }
+        public class JSONObj
+        {
+            public string[] Property1 { get; set; }
+        }
+
     }
 }

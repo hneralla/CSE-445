@@ -43,46 +43,55 @@ namespace CreateAccount
             Boolean created = false; // boolean value to return
             byte[] pwd; // byte array to store the encrypted password into
             string encryptedPass = ""; // string to store the encrypted password into
-            
-            string path = Path.Combine(HttpRuntime.AppDomainAppPath, @"\page3\user_credentials.json"); // File path to user credentials 
-            string jsonData = File.ReadAllText(path); // reads in the JSON file into a string
 
-            usersObj = JsonConvert.DeserializeObject<UsersRootObject>(jsonData); // transfers jsonData to the usersObj
 
-            if (usersObj.users != null) // makes sure that there is at least one existing user to iterate through accounts
+            string path = HttpRuntime.AppDomainAppPath + "\\user_credentials.json"; // File path to user credentials 
+
+            try
             {
-                usersList = usersObj.users.ToList<User>(); // transfers users to a List<User>
+                string jsonData = File.ReadAllText(path); // reads in the JSON file into a string
 
-                foreach (User user in usersList) // iterates through the users
+                usersObj = JsonConvert.DeserializeObject<UsersRootObject>(jsonData); // transfers jsonData to the usersObj
+
+                if (usersObj.users != null) // makes sure that there is at least one existing user to iterate through accounts
                 {
-                    if (user.username == username) // checks if the username already exists
+                    usersList = usersObj.users.ToList<User>(); // transfers users to a List<User>
+
+                    foreach (User user in usersList) // iterates through the users
                     {
-                        exists = true; 
+                        if (user.username == username) // checks if the username already exists
+                        {
+                            exists = true;
+                        }
                     }
                 }
-            }
-           
-           if (!exists) // If username doesn't already exist
-           {       
-                pwd = Encoding.ASCII.GetBytes(password); // Encrypts the password
-                
-                // Loop converts byte array to a string
-                foreach (byte digit in pwd)
+
+                if (!exists) // If username doesn't already exist
                 {
-                    encryptedPass += digit;
+                    pwd = Encoding.ASCII.GetBytes(password); // Encrypts the password
+
+                    // Loop converts byte array to a string
+                    foreach (byte digit in pwd)
+                    {
+                        encryptedPass += digit;
+                    }
+
+                    newUser.username = username;
+                    newUser.password = encryptedPass;
+                    usersList.Add(newUser); // adds the new user to the user list
+
+                    usersObj.users = usersList.ToArray<User>(); // Converts the list to a User object array
+                    json = JsonConvert.SerializeObject(usersObj, Formatting.Indented); // Converts object to JSON string
+                    File.WriteAllText(path, json); // Writes JSON data to the file
+
+                    created = true;
                 }
+            }
+            finally
+            {
 
-                newUser.username = username; 
-                newUser.password = encryptedPass;
-                usersList.Add(newUser); // adds the new user to the user list
-
-                usersObj.users = usersList.ToArray<User>(); // Converts the list to a User object array
-                json = JsonConvert.SerializeObject(usersObj, Formatting.Indented); // Converts object to JSON string
-                File.WriteAllText(path, json); // Writes JSON data to the file
-
-                created = true; 
-           }
-
+            }
+            
             return created; // Returns creation confirmation
         }
 
