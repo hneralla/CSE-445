@@ -1,0 +1,30 @@
+Inputs:
+None required by the user. 
+
+Line 25 in Program.cs contains the following line:
+	mcb = new MultiCellBuffer(3); //initializes MultiCellBuffer with 3 cells
+
+That line can be changed (value must be in the interval (1, 5]) if needed.
+ 
+Output:
+
+A message will be written to the console whenever an order is created (along with the timestamp).
+
+A message will be written to the console whenever an order has been processed (along with the price/chicken used and number of chickens in the order).
+
+Example:
+
+Store 3's order has been created at 10:32:24.
+Store 3's order has been processed. The amount to be charged is $535 ($15 per chicken for 33 chickens).
+Store 2's order has been created at 10:32:24.
+Store 2's order has been processed. The amount to be charged is $540 ($20 per chicken for 25 chickens).
+Store 4's order has been created at 10:32:24.
+Store 4's order has been processed. The amount to be charged is $1750 ($20 per chicken for 81 chickens).
+Store 5's order has been created at 10:32:25.
+Store 5's order has been processed. The amount to be charged is $605 ($20 per chicken for 28 chickens).
+Store 1's order has been created at 10:32:25.
+Store 1's order has been processed. The amount to be charged is $734 ($20 per chicken for 34 chickens). 
+
+Disclaimer:
+
+Since the prices change randomly, providing a test output will not be useful because the output will be different every time the program is run.
