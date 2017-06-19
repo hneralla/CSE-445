@@ -1,9 +1,0 @@
-C:\Users\Harith Neralla\repos\cse-445-assignment-3\CreateAccount\bin\CreateAccount.dll.config
-C:\Users\Harith Neralla\repos\cse-445-assignment-3\CreateAccount\bin\CreateAccount.dll
-C:\Users\Harith Neralla\repos\cse-445-assignment-3\CreateAccount\bin\CreateAccount.pdb
-C:\Users\Harith Neralla\repos\cse-445-assignment-3\CreateAccount\bin\Newtonsoft.Json.dll
-C:\Users\Harith Neralla\repos\cse-445-assignment-3\CreateAccount\bin\Newtonsoft.Json.xml
-C:\Users\Harith Neralla\repos\cse-445-assignment-3\CreateAccount\obj\Release\CreateAccount.dll
-C:\Users\Harith Neralla\repos\cse-445-assignment-3\CreateAccount\obj\Release\CreateAccount.pdb
-C:\Users\Harith Neralla\repos\cse-445-assignment-3\CreateAccount\bin\user_credentials.json
-C:\Users\Harith Neralla\repos\cse-445-assignment-3\CreateAccount\obj\Release\CreateAccount.csprojResolveAssemblyReference.cache
