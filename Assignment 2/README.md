@@ -1,4 +1,4 @@
-# ASU CSE 445 ASSIGNMENT 2: Event-driven programming and Multi-threading (06/03/2017)
+# ASU CSE 445 Assignment 2: Event-driven programming and Multi-threading (06/03/2017)
  
 Student: Harith Neralla
 
