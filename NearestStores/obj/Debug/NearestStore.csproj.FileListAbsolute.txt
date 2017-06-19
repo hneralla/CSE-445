@@ -5,3 +5,4 @@ C:\Users\Harith Neralla\repos\cse-445-assignment-3\NearestStores\bin\Newtonsoft.
 C:\Users\Harith Neralla\repos\cse-445-assignment-3\NearestStores\bin\Newtonsoft.Json.xml
 C:\Users\Harith Neralla\repos\cse-445-assignment-3\NearestStores\obj\Debug\NearestStores.dll
 C:\Users\Harith Neralla\repos\cse-445-assignment-3\NearestStores\obj\Debug\NearestStores.pdb
+C:\Users\Harith Neralla\repos\cse-445-assignment-3\NearestStores\obj\Debug\NearestStore.csprojResolveAssemblyReference.cache

@@ -7,26 +7,26 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
     <_NewBackgroundProfile>True</_NewBackgroundProfile>
-    <_PublishTargetUrl>C:\Users\Harith Neralla\Desktop\PreCompiled NearestStore</_PublishTargetUrl>
+    <_PublishTargetUrl>C:\Users\Harith Neralla\Desktop\Pre Compiled Assignment 3\PreCompiled NearestStore</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/NearestStores.dll">
-      <publishTime>06/15/2017 19:08:18</publishTime>
+      <publishTime>06/18/2017 18:18:48</publishTime>
     </File>
     <File Include="bin/NearestStores.pdb">
-      <publishTime>06/15/2017 19:08:18</publishTime>
+      <publishTime>06/18/2017 18:18:48</publishTime>
     </File>
     <File Include="bin/Newtonsoft.Json.dll">
       <publishTime>04/02/2017 17:46:32</publishTime>
     </File>
     <File Include="packages.config">
-      <publishTime>06/10/2017 22:02:32</publishTime>
+      <publishTime>06/18/2017 18:02:26</publishTime>
     </File>
     <File Include="Service1.svc">
       <publishTime>06/10/2017 21:51:32</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>06/15/2017 19:08:19</publishTime>
+      <publishTime>06/18/2017 18:18:49</publishTime>
     </File>
   </ItemGroup>
 </Project>

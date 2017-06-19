@@ -19,12 +19,12 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:61379/CreateAccountService.svc?wsdl" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://webstrar53.fulton.asu.edu/Page3/CreateAccountService.svc?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="CreateAccountService.xsd" MetadataType="Schema" ID="4ef6d0ff-c593-4216-abd8-d4e2d3919295" SourceId="1" SourceUrl="http://localhost:61379/CreateAccountService.svc?xsd=xsd1" />
-    <MetadataFile FileName="Service1.wsdl" MetadataType="Wsdl" ID="1cc08cc0-e941-48ee-ba1d-0d8ac6d82c56" SourceId="1" SourceUrl="http://localhost:61379/CreateAccountService.svc?wsdl" />
-    <MetadataFile FileName="CreateAccountService1.xsd" MetadataType="Schema" ID="6a4d0c10-a358-49a4-a034-df69e7ddd538" SourceId="1" SourceUrl="http://localhost:61379/CreateAccountService.svc?xsd=xsd0" />
+    <MetadataFile FileName="CreateAccountService2.xsd" MetadataType="Schema" ID="5c4c824f-90f9-43c9-979f-b3001449ec0d" SourceId="1" SourceUrl="http://webstrar53.fulton.asu.edu/Page3/CreateAccountService.svc?xsd=xsd1" />
+    <MetadataFile FileName="Service11.wsdl" MetadataType="Wsdl" ID="ea073b80-8a66-4def-a928-fa2ed4e34eba" SourceId="1" SourceUrl="http://webstrar53.fulton.asu.edu/Page3/CreateAccountService.svc?wsdl" />
+    <MetadataFile FileName="CreateAccountService21.xsd" MetadataType="Schema" ID="d64136b7-dad3-4b49-8f57-441acdf3b95f" SourceId="1" SourceUrl="http://webstrar53.fulton.asu.edu/Page3/CreateAccountService.svc?xsd=xsd0" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
