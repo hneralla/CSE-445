@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.6
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HarithsBrowser", "HarithsBrowser\HarithsBrowser.csproj", "{8E5C40FC-C8CC-4F92-90C3-D484E8875EFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TempConverterWebApp", "TempConverterWebApp\TempConverterWebApp.csproj", "{518CF9EE-D6CF-4695-8FF4-E41C0F285CED}"
+	ProjectSection(ProjectDependencies) = postProject
+		{397169BE-897F-4BDE-98D7-F0187F40BD63} = {397169BE-897F-4BDE-98D7-F0187F40BD63}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TempService", "TempService\TempService.csproj", "{397169BE-897F-4BDE-98D7-F0187F40BD63}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TempConverterFormsApp", "TempConverterFormsApp\TempConverterFormsApp.csproj", "{2FB9BAED-874E-44EB-9AA3-55F3E2BEE44C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{397169BE-897F-4BDE-98D7-F0187F40BD63} = {397169BE-897F-4BDE-98D7-F0187F40BD63}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8E5C40FC-C8CC-4F92-90C3-D484E8875EFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E5C40FC-C8CC-4F92-90C3-D484E8875EFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E5C40FC-C8CC-4F92-90C3-D484E8875EFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E5C40FC-C8CC-4F92-90C3-D484E8875EFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{518CF9EE-D6CF-4695-8FF4-E41C0F285CED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{518CF9EE-D6CF-4695-8FF4-E41C0F285CED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{518CF9EE-D6CF-4695-8FF4-E41C0F285CED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{518CF9EE-D6CF-4695-8FF4-E41C0F285CED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{397169BE-897F-4BDE-98D7-F0187F40BD63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{397169BE-897F-4BDE-98D7-F0187F40BD63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{397169BE-897F-4BDE-98D7-F0187F40BD63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{397169BE-897F-4BDE-98D7-F0187F40BD63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FB9BAED-874E-44EB-9AA3-55F3E2BEE44C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FB9BAED-874E-44EB-9AA3-55F3E2BEE44C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FB9BAED-874E-44EB-9AA3-55F3E2BEE44C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FB9BAED-874E-44EB-9AA3-55F3E2BEE44C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

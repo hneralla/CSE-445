@@ -1,0 +1,11 @@
+/Users/hneralla/Google Drive/ASU/Summer '17/CSE 445/Assignments/A1/Assignment 1/TempService/bin/Temperature.dll
+/Users/hneralla/Google Drive/ASU/Summer '17/CSE 445/Assignments/A1/Assignment 1/TempService/bin/Temperature.pdb
+/Users/hneralla/Google Drive/ASU/Summer '17/CSE 445/Assignments/A1/Assignment 1/TempService/obj/Debug/TempService.csproj.CoreCompileInputs.cache
+/Users/hneralla/Google Drive/ASU/Summer '17/CSE 445/Assignments/A1/Assignment 1/TempService/obj/Debug/Temperature.dll
+/Users/hneralla/Google Drive/ASU/Summer '17/CSE 445/Assignments/A1/Assignment 1/TempService/obj/Debug/Temperature.pdb
+C:\Users\Harith Neralla\Google Drive\ASU\Summer '17\CSE 445\Assignments\A1\Assignment 1\TempService\bin\Temperature.dll.config
+C:\Users\Harith Neralla\Google Drive\ASU\Summer '17\CSE 445\Assignments\A1\Assignment 1\TempService\bin\Temperature.dll
+C:\Users\Harith Neralla\Google Drive\ASU\Summer '17\CSE 445\Assignments\A1\Assignment 1\TempService\bin\Temperature.pdb
+C:\Users\Harith Neralla\Google Drive\ASU\Summer '17\CSE 445\Assignments\A1\Assignment 1\TempService\obj\Debug\TempService.csprojResolveAssemblyReference.cache
+C:\Users\Harith Neralla\Google Drive\ASU\Summer '17\CSE 445\Assignments\A1\Assignment 1\TempService\obj\Debug\Temperature.dll
+C:\Users\Harith Neralla\Google Drive\ASU\Summer '17\CSE 445\Assignments\A1\Assignment 1\TempService\obj\Debug\Temperature.pdb
