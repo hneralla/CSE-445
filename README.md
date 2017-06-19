@@ -1,22 +1,21 @@
-ASU CSE 445 ASSIGNMENT 2: Event-driven programming and Multi-threading (06/03/2017)
+# ASU CSE 445 ASSIGNMENT 2: Event-driven programming and Multi-threading (06/03/2017)
  
 Student: Harith Neralla
 
 Files included in the Visual Studio 2017 project:
-Program.cs:		contains main method
-ChickenFarm.cs:		contains pricingModel() and priceCut events 
-Retailer.cs:		contains Retailer class and orderCreated events
-MultiCellBuffer.cs	contains setOneCell and getOneCell along with the rest of the 
+* Program.cs:		contains main method
+* ChickenFarm.cs:	contains pricingModel() and priceCut events 
+* Retailer.cs:		contains Retailer class and orderCreated events
+* MultiCellBuffer.cs:	contains setOneCell and getOneCell along with the rest of the 
 			MultiCellBuffer information
-EncodeDecode.cs		contains encode and decode methods
-OrderClass.cs		class definition for an orderObject
-OrderProcessing.cs	contains order processing functions
+* EncodeDecode.cs:	contains encode and decode methods
+* OrderClass.cs:	class definition for an orderObject
+* OrderProcessing.cs:	contains order processing functions
 
 There are multiple events:
-
-priceCutEvent:		lets the retailer know when the price has decreased
-orderCreatedEvent:	lets the orderProccessing class know to process a new order
-orderProcessedEvent:	sends confirmation that order has been processed
+* priceCutEvent:		lets the retailer know when the price has decreased
+* orderCreatedEvent:	lets the orderProccessing class know to process a new order
+* orderProcessedEvent:	sends confirmation that order has been processed
 
 How the program works:
 
