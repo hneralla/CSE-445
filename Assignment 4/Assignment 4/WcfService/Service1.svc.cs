@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Xml;
+﻿using System.Xml;
+using System.Xml.Linq;
 using System.Xml.Schema;
 using System.Xml.Xsl;
 using System.IO;
-using System.Runtime.Serialization;
-using System.ServiceModel;
-using System.ServiceModel.Web;
-using System.Text;
 
 namespace WcfService
 { 
@@ -16,9 +10,9 @@ namespace WcfService
     {
         public string verification(string xmlUrl, string xsdUrl)
         {
-            string output = "";
+            string output = "No Errors";
             string xml;
-            XmlDocument xd = new XmlDocument();
+       
             XmlSchemaSet set = new XmlSchemaSet();
            
             using (var wc = new System.Net.WebClient())
@@ -26,8 +20,13 @@ namespace WcfService
                 xml = wc.DownloadString(xmlUrl); // Downloads the XML document using the URL
             }
 
-            xd.LoadXml(xml); // Loads xml string into XmlDocument object
-            set.Add(null, xsdUrl); // Loads the schema into the schema set
+            var xdoc = XDocument.Load(xml); // Loads xml string into XmlDocument object
+            set.Add("", xsdUrl); // Loads the schema into the schema set
+
+            xdoc.Validate(set, (o, e) =>
+            {
+                 output = e.Message;
+            });
 
             return output;
         }
@@ -45,9 +44,16 @@ namespace WcfService
                 xsl = wc.DownloadString(xslUrl); // Downloads the XSL document using the URL
             }
 
-            trans.Load(XmlReader.Create(new StringReader(xsl)));  
-            trans.Transform(XmlReader.Create(new StringReader(xml)), null, htmlResult);
+            trans.Load(XmlReader.Create(new StringReader(xsl)));
 
+            try
+            {
+                trans.Transform(XmlReader.Create(new StringReader(xml)), null, htmlResult);
+            }catch(XsltException e1)
+            {
+                htmlResult.WriteLine(e1);
+            }
+            
             return htmlResult.ToString();
         }
     }

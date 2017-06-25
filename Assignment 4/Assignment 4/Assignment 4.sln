@@ -5,6 +5,11 @@ VisualStudioVersion = 15.0.26430.6
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfService", "WcfService\WcfService.csproj", "{29E7645D-FBB1-46F1-A7DD-E45C4BF0ABAE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication", "WebApplication\WebApplication.csproj", "{C5D8887D-EA9C-4BE2-8625-3C3639FA6768}"
+	ProjectSection(ProjectDependencies) = postProject
+		{29E7645D-FBB1-46F1-A7DD-E45C4BF0ABAE} = {29E7645D-FBB1-46F1-A7DD-E45C4BF0ABAE}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +20,10 @@ Global
 		{29E7645D-FBB1-46F1-A7DD-E45C4BF0ABAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{29E7645D-FBB1-46F1-A7DD-E45C4BF0ABAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{29E7645D-FBB1-46F1-A7DD-E45C4BF0ABAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5D8887D-EA9C-4BE2-8625-3C3639FA6768}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5D8887D-EA9C-4BE2-8625-3C3639FA6768}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5D8887D-EA9C-4BE2-8625-3C3639FA6768}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5D8887D-EA9C-4BE2-8625-3C3639FA6768}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
