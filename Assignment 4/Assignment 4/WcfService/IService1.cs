@@ -12,7 +12,10 @@ namespace WcfService
     public interface IService1
     {
         [OperationContract]
-        string search(string url, string name);
+        string verification(string xmlUrl, string xslUrl);
+
+        [OperationContract]
+        string transformation(string xmlUrl, string xslUrl);
     }
     
 }
