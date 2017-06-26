@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Persons>
+
+<Person>
+  <Name>
+     asdf<First>Daenerys</First>
+  	<Last>Targaryen</Last>
+  </Name>
+  <Credential>
+  	<Id>dtarg</Id>
+  	<Password Encryption="yes">mother0fDragons123!</Password>
+  </Credential>
+  <Phone>
+  	<Work>9251234567</Work>
+  	<Cell Provider="Verizon">9253825633</Cell>
+  </Phone>
+  <Category>Friend</Category>
+</Person>
+
+<Person>
+  <Name>
+  	<First>Don</First>
+  	<Last>Draper</Last>
+  </Name>
+  <Credential>
+  	<Id>ddraper</Id>
+  	<Password Encryption="yes">iL0VeHersheys!</Password>
+  </Credential>
+  <Phone>
+  	<Work>2123359876</Work>
+  	<Cell Provider="TMobile">2129984137</Cell>
+  </Phone>
+  <Category>Work</Category>
+</Person>
+
+<Person>
+  <Name>
+  	<First>Walter</First>
+  	<Last>White</Last>
+  </Name>
+  <Credential>
+  	<Id>wwhite</Id>
+  	<Password Encryption="yes">iAmthedang3r!</Password>
+  </Credential>
+  <Phone>
+  	<Work>5051297639</Work>
+  	<Cell Provider="Verizon">5051129224</Cell>
+  </Phone>
+  <Category>Work</Category>
+</Person>
+
+<Person>
+  <Name>
+  	<First>Rust</First>
+  	<Last>Cohel</Last>
+  </Name>
+  <Credential>
+  	<Id>rochelmcadams</Id>
+  	<Password Encryption="yes">time1saCircl3!</Password>
+  </Credential>
+  <Phone>
+  	<Work>3189916739</Work>
+  	<Cell Provider="Sprint">3182840920</Cell>
+  </Phone>
+  <Category>Friend</Category>
+</Person>
+
+<Person>
+  <Name>
+  	<First>Howard</First>
+  	<Last>Stark</Last>
+  </Name>
+  <Credential>
+  	<Id>hstark</Id>
+  	<Password Encryption="yes">1DiditForYOU!</Password>
+  </Credential>
+  <Phone>
+  	<Work>2121291182</Work>
+  	<Cell Provider="Sprint">2121238987</Cell>
+  </Phone>
+  <Category>Family</Category>
+</Person>
+
+</Persons>
