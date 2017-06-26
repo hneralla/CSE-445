@@ -47,7 +47,7 @@ namespace WcfService
                 return output;
             }
             
-            var xdoc = DocumentToXDocumentReader(xd);
+            var xdoc = XmlDocToXDoc(xd);
 
             set.Add(null, xsdUrl); // Loads the schema into the schema set
 
@@ -58,9 +58,10 @@ namespace WcfService
 
             return output;
         }
-        private static XDocument DocumentToXDocumentReader(XmlDocument doc)
+
+        private static XDocument XmlDocToXDoc(XmlDocument xdoc)
         {
-            return XDocument.Load(new XmlNodeReader(doc));
+            return XDocument.Load(new XmlNodeReader(xdoc));
         }
 
         // Takes URLs for XML and XSL documents and transforms the XML into HTML. Returns HTML in the form of a string.
