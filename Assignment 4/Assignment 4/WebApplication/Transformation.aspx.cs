@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
+using System.IO;
+using System.Web;
 
 namespace WebApplication
 {
@@ -17,6 +15,7 @@ namespace WebApplication
         protected void btn_transform_Click(object sender, EventArgs e)
         {
             XMLServiceReference.Service1Client client = new XMLServiceReference.Service1Client();
+            StreamWriter file; // to write the html into a file
             Uri myUri; // To valid the HTTP URLs
             lbl_output.Text = ""; // Clears the label
 
@@ -25,7 +24,11 @@ namespace WebApplication
                 // Makes sure the URLs are valid
                 if (Uri.TryCreate(txt_xml.Text, UriKind.RelativeOrAbsolute, out myUri) && Uri.TryCreate(txt_xsl.Text, UriKind.RelativeOrAbsolute, out myUri))
                 {
-                    lbl_output.Text = client.transformation(txt_xml.Text, txt_xsl.Text);
+                    string html = client.transformation(txt_xml.Text, txt_xsl.Text);
+                    lbl_output.Text = html;
+                    file = new StreamWriter(HttpRuntime.AppDomainAppPath + @"\App_Data\Output.html");
+                    file.WriteLine(html);
+                    file.Close();
                 }
                 else if (!Uri.TryCreate(txt_xml.Text, UriKind.RelativeOrAbsolute, out myUri) && !Uri.TryCreate(txt_xsl.Text, UriKind.RelativeOrAbsolute, out myUri))
                 {

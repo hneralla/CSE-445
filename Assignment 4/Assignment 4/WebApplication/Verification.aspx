@@ -6,11 +6,11 @@
 XMLS (.xsd) file as inputs and validates the XML file against the corresponding XMLS (XSD) file. </h4>
     <p>Enter the URL for the XML file (ends with .xml)</p>
 <p>
-    <asp:TextBox ID="txt_xml" runat="server" OnTextChanged="TextBox1_TextChanged"></asp:TextBox>
+    <asp:TextBox ID="txt_xml" runat="server" OnTextChanged="TextBox1_TextChanged" Width="1000px"></asp:TextBox>
 </p>
 <p>Enter the URL for the XMLS file (ends with .xsd)</p>
 <p>
-    <asp:TextBox ID="txt_xsd" runat="server" OnTextChanged="TextBox2_TextChanged"></asp:TextBox>
+    <asp:TextBox ID="txt_xsd" runat="server" OnTextChanged="TextBox2_TextChanged" Width="1000px"></asp:TextBox>
 </p>
 <p>
     <asp:Button ID="btn_verify" runat="server" OnClick="btn_verify_Click" Text="Verify" />

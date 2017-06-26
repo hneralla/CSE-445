@@ -6,11 +6,11 @@
 as inputs and generates the HTML file based on the XML and XSL files.</h4>
      Enter the URL for the XML file (ends with .xml)
     <p>
-    <asp:TextBox ID="txt_xml" runat="server"></asp:TextBox>
+    <asp:TextBox ID="txt_xml" runat="server" Width="1000px"></asp:TextBox>
     </p>
     <p>Enter the URL for the XSL file (ends with .xsl)</p>
     <p>
-    <asp:TextBox ID="txt_xsl" runat="server"></asp:TextBox>
+    <asp:TextBox ID="txt_xsl" runat="server" Width="1000px"></asp:TextBox>
     </p>
     <p>
     <asp:Button ID="btn_transform" runat="server" OnClick="btn_transform_Click" Text="Transform" />

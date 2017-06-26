@@ -3,13 +3,8 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="jumbotron">
-        <h1>Assignment 4 Web Application</h1>
+        <h3>Assignment 4 Web Application</h3>
+        <h5>Click the tabs above to go to the services.</h5>
     </div>
-
-    <div class="row">
-        <div class="col-md-4">
-            
-        </div>
-    </div>
-
+  
 </asp:Content>
