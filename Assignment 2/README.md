@@ -1,8 +1,6 @@
-# ASU CSE 445 Assignment 2: Event-driven programming and Multi-threading (06/03/2017)
- 
-Student: Harith Neralla
+# Assignment 2: Event-driven programming and Multithreading 
 
-Files included in the Visual Studio 2017 project:
+### Files included:
 * Program.cs:		contains main method
 * ChickenFarm.cs:	contains pricingModel() and priceCut events 
 * Retailer.cs:		contains Retailer class and orderCreated events
@@ -12,12 +10,12 @@ Files included in the Visual Studio 2017 project:
 * OrderClass.cs:	class definition for an orderObject
 * OrderProcessing.cs:	contains order processing functions
 
-There are multiple events:
+### There are multiple events:
 * priceCutEvent:		lets the retailer know when the price has decreased
 * orderCreatedEvent:	lets the orderProccessing class know to process a new order
 * orderProcessedEvent:	sends confirmation that order has been processed
 
-How the program works:
+### How the program works:
 
 There are 5 retailer threads, along with one chicken farm thread, started in the main method. 
 A multi-cell buffer is also created with 3 as the default size (line 25 in Program.cs). 
@@ -32,6 +30,4 @@ been decreased.
 
 The encode and decode methods use the format of: senderID:cardNo:amount.
 
-
-
-If there are any questions, please contact hneralla@asu.edu 
+If you have any questions, please contact hneralla@asu.edu. 
