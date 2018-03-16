@@ -25,7 +25,7 @@ namespace Assignment_2
             mcb = new MultiCellBuffer(3); //initializes MultiCellBuffer with 3 cells
 
             Thread chickenFunc = new Thread(new ThreadStart(chicken.chickenFunc)); //chicken thread
-            //chickenFunc.Name = "CHICKEENNNSSSSS"; // NEED TO CHANGE THIS
+            
             chickenFunc.Start(); // starts the chicken thread
 
             ChickenFarm.priceCut += new priceCutEvent(chickenStore.chickenOnSale); //execute chickenOnSale method when price is cut
